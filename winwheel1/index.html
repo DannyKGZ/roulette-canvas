@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/modalwindow/modalwindow.css">
+    <title>Document</title>
+</head>
+<body>
+  <!--Кнопка-->
+  <button id="btn_modal_window">Open Modal</button>
+    <div id="my_modal" class="modal">
+      <!--Окно-->
+      <div class="modal_content" id="modal1">
+        <div class="container__window">
+          <!--Окно левая часть-->
+          <canvas id="wheelcanvas" width="500" height="500"></canvas>
+            <img class="arrow" src="/img/jpg/2.png" alt="arrow">
+        </div>
+          <!--Окно правая часть-->
+        <div class="container__window" id="containerLeft">
+          <div class="container__window--right">
+            <img class="container__window--boxprize" src="/img/jpg/4.jpg" alt="">
+   
+            <a class="close_modal_window" onclick=''  href='#'><img src="/img/jpg/5.jpg" alt="ХОРОШО"></a>
+            <!--
+            <p class="container__window--text">Зарегистрируйтесь, чтобы получить приз<br/></p>
+            <input class="container__window--tel" type="tel" name="tel" placeholder="Телефон">
+            <a class="reg__button" type="button" id="reg" href="#"><img src="/img/jpg/6.jpg" alt="ЗАРЕГИСТРИРОВАТЬСЯ"></a>
+            -->
+            <!--
+            <img class="container__window--boxprize" src="/img/jpg/4.jpg" alt="">
+            <p class="container__window--text">Хотите получить приз?<br/> <span>от «Созвездие Красоты»</span></p>
+            <a class="spin__button" type="button" onclick="spin();" id="btn_rodar" href="#"><img src="/img/jpg/7.jpg" alt="Получить"></a>  
+            -->
+          </div>  
+          <a class="close_modal_window close__window" href='#' onclick=''><img src="/img/jpg/3.jpg" alt="Закрыть модальное окно"></a>
+        </div>
+    </div>
+        
+<script src="/index.js"></script>
+<script src="/modalwindow/modalwindow.js"></script>
+</body>
+
+</html>

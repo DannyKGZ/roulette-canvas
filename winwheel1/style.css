@@ -1,0 +1,17 @@
+html,body {
+    height: 100%;
+}
+canvas {
+    display: block;
+    position: absolute;
+    left: -27px;
+    top: -21px;
+}
+/*
+ARROW
+*/
+.arrow {
+    position: absolute;
+    right: -22px;
+    top: 204px;
+}
