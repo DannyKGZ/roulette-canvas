@@ -1,75 +1,110 @@
-
 /****************
-МОДАЛЬНОЕ ОКНО
+    МОДАЛЬНОЕ ОКНО
 ****************/
 .modal {
     /*display: none;*/
     position: fixed;
-    z-index: 1;
     left: 0;
     top: 0;
+    
     width: 100%;
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.6);
+    
+    z-index: 1;
     z-index: 1000;
 }
-.modal_content {
-    display: flex;
+.modal-content {
     position: relative;
+
     background-color: #fefefe;
     margin: 15% auto;
     border: 1px solid #888;
+
     width: 800px;
     height: 460px;
+
     /*z-index: 99999;*/
+    display: flex;
 }
-.close__window {
+.modal-window__close {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
 }
-.container__window {
+.container-window {
     position: relative;   
 }
 /****************
-ОКНО ЛЕВАЯ ЧАСТЬ
+    ОКНО ЛЕВАЯ ЧАСТЬ
 ****************/
-
-.container__window:first-child{ 
+.container-window__left-side{ 
     background-color:#febfca;
     width: 55%;
 }
+/***************
+    ARROW
+***************/
+.container-window__arrow {
+    position: absolute;
+    right: -22px;
+    top: 204px;
+}
+
+/***************
+    РАКУШКА
+***************/
+.wheelcanvas-logo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
 
 /****************
-ОКНО ПРАВАЯ ЧАСТЬ
+    ОКНО ПРАВАЯ ЧАСТЬ
 ****************/
-.container__window:last-child { 
+.container-window__right-side {
     width: 45%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
-.container__window--right{
+.container-window__right-section{
     align-items: center;
+    text-align: center;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto;
-
-    width: 230px;
-    height: 250px;
 }
-.container__window--boxprize{
-    width: 70px;
-    height: 90px;
-}
-.spin__button:hover,
-.reg__button:hover {
+.right-side__button-spin:hover,
+.right-side__button-reg:hover {
     opacity: 0.7;
 }
-.container__window--tel{
+.right-side__second-part__tel{
     width: 300px;
     height: 40px;
     margin-bottom: 20px;
 }
+
+/***************
+    Right side innerHTML
+**************
+.right-side__second-part:nth-child(2n),
+.right-side__third-part:nth-child(3n) {
+    display: none;
+}*/

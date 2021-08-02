@@ -7,11 +7,3 @@ canvas {
     left: -27px;
     top: -21px;
 }
-/*
-ARROW
-*/
-.arrow {
-    position: absolute;
-    right: -22px;
-    top: 204px;
-}
