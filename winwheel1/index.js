@@ -43,19 +43,9 @@ function drawRouletteWheel() {
         ctx.arc(250, 250, outsideRadius + 7, 0, 2 * Math.PI);
         ctx.fill();
         ctx.stroke();
-
         ctx.restore();
 
-        ctx.font = 'Circe,Arial,Helvetica,sans-serif;';
-
-
-        //circle inside
-        let img = new Image();
-        // img.onload = function() {
-        //     ctx.drawImage(img, 203, 203);
-        // };
-        // img.src = "/img/jpg/8.png";
-
+        
 
         for (let i = 0; i < 10; i++) {
 
@@ -72,17 +62,17 @@ function drawRouletteWheel() {
             ctx.shadowBlur = 1;
             ctx.shadowColor = "black";*/
             ctx.fillStyle = "#000";//ЦВЕТ ТЕКСТА 
+            ctx.font = "12px Arial";
             ctx.translate(250 + Math.cos(angle + arc / 2) * textRadius, 250 + Math.sin(angle + arc / 2) * textRadius);
             ctx.rotate(angle + arc / 3 + Math.PI / 150); //Поворачиваем текст
             let text = quienes[i];
-            ctx.fillText(text, -ctx.measureText(text).width / 2, 0); //fillText - текст с заливкой.
+            ctx.fillText(text, -ctx.measureText(text).width / 2.3, 0)
 
             ctx.beginPath();
             ctx.arc(250 - outsideRadius + 34, 0, 3, 0, 2 * Math.PI);
             ctx.fillStyle = "#f47a91";
             ctx.fill();
             //ctx.stroke();
-
             ctx.restore(); //Возвращает ранее сохраненное состояние и атрибуты
         }
 
@@ -106,11 +96,10 @@ function drawRouletteWheel() {
 
 function rotateWheel() {
     clearTimeout(spinTimeout);
-    spinTime += 10; //делай оборот больше 360 градусов
+    spinTime += 5; //Как долго будет крутиться
 
     if (spinTime >= spinTimeTotal) {
         stopRotateWheel();
-
         return;
     }
     let spinAngle = spinAngleStart - easeOut(spinTime, 0, spinAngleStart, spinTimeTotal); //метод easeout - анимация в обратном порядке
@@ -124,10 +113,11 @@ function rotateWheel() {
 
 // При остановке прокрутки, будет показывать число по середине круга.
 function stopRotateWheel() {
-    let degrees = startAngle * 180 / Math.PI + 0;
+    let degrees = startAngle * 180 / Math.PI + 5;
     console.log(degrees);
     let arcd = arc * 180 / Math.PI;
     let index = Math.floor((360 - degrees % 360) / arcd);
+    console.log(index);
     ctx.save();
 
     /*ctx.font = 'bold 32px sans-serif';
@@ -135,18 +125,14 @@ function stopRotateWheel() {
     ctx.shadowOffsetY = 2;
     ctx.shadowBlur    = 2;
     ctx.shadowColor   = "black";*/
-
     let text = quienes[index]
-    
     //ctx.fillText(text, 250 - ctx.measureText(text).width / 2, 250 + 10);
-    
     ctx.restore();
-
     //alert(text);
+
     //убираем 1 часть
     document.querySelector('.right-side__first-part').classList.add("no-active");
     document.querySelector('.right-side__second-part').classList.remove("no-active");
-
 
     document.querySelector('.win-text').innerHTML = text;
     

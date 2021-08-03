@@ -32,26 +32,28 @@
             
             <!--Окно 1 часть-->
             <div class="right-side__first-part">
-              <p>Хотите получить приз?<br/> <span>от «Созвездие Красоты»</span></p>
+              <p>Хотите получить приз?<br/> <span class="container-window__span-text">от «Созвездие Красоты»</span></p>
                 <a class="right-side__button-spin" type="button" onclick="spin();" id="btn_rodar" href="#"><img src="/img/jpg/7.jpg" alt="Получить"></a>
             </div>
             
             <!--Окно 2 часть-->
             <div class="right-side__second-part no-active">
               <p>Зарегистрируйтесь, чтобы получить приз<br/></p>
-              <input class="right-side__second-part__tel" type="tel" name="tel" placeholder="Телефон">
-              <a class="right-side__button-reg" type="button" id="reg" onclick="regtxt();" href="#"><img src="/img/jpg/6.jpg" alt="ЗАРЕГИСТРИРОВАТЬСЯ"></a>
+              <form action="">
+                <input class="right-side__second-part__tel" type="tel" name="tel" placeholder="Телефон" required>
+                <a class="right-side__button-reg" type="button" id="reg" onclick="regtxt();" href="#"><img src="/img/jpg/6.jpg" alt="ЗАРЕГИСТРИРОВАТЬСЯ"></a>
+              </form>
             </div>
             
             <!--Окно 3 часть-->
             <div class="right-side__third-part no-active">
               <div class="win-text"></div>
-              <span>Купон отправлен на почту</span>
-              <a class="modal-window__close" onclick=''  href='#'><img src="/img/jpg/5.jpg" alt="ХОРОШО"></a>
+              <span class="container-window__span-text">Купон отправлен на почту</span>
+              <a class="" onclick=''  href='#'><img src="/img/jpg/5.jpg" alt="ХОРОШО"></a>
             </div>
             
           </div>
-          <a class="modal-window__close" href='#' onclick=''><img src="/img/jpg/3.jpg" alt="Закрыть модальное окно"></a>
+          <span class="modal-window__close">×</span>
         </div>
       </div>
     </div>

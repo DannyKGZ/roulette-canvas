@@ -28,14 +28,12 @@
     /*z-index: 99999;*/
     display: flex;
 }
-.modal-window__close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
+
 .container-window {
     position: relative;   
+}
+.container-window__span-text{
+    color: #777777;
 }
 /****************
     ОКНО ЛЕВАЯ ЧАСТЬ
@@ -50,7 +48,7 @@
 .container-window__arrow {
     position: absolute;
     right: -22px;
-    top: 204px;
+    top: 198px;
 }
 
 /***************
@@ -84,12 +82,7 @@
     flex-direction: column;
 }
 .container-window__right-section{
-    align-items: center;
     text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 .right-side__button-spin:hover,
 .right-side__button-reg:hover {
@@ -100,6 +93,22 @@
     height: 40px;
     margin-bottom: 20px;
 }
+.right-side__third-part{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .no-active{
     display: none;
+}
+/*
+BUTTON CLOSE
+*/
+.modal-window__close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+    font-size:  30px;
+    font-weight:  bold;
 }
