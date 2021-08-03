@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/winwheel1/style.css">
-    <link rel="stylesheet" href="/winwheel1/modalwindow/modalwindow.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/modalwindow/modalwindow.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,43 +19,45 @@
         <!--Окно левая часть-->
         <div class="container-window container-window__left-side">
           <canvas id="wheelcanvas" width="500" height="500"></canvas>
-          <img class="container-window__arrow" src="/winwheel1/img/jpg/2.png" alt="Стрелка">
+          <img class="container-window__arrow" src="/img/jpg/2.png" alt="Стрелка">
           <div class="wheelcanvas-logo">
-            <img src="/winwheel1/img/jpg/8.png" alt="Seashell">
+            <img src="/img/jpg/8.png" alt="Seashell">
           </div>
         </div>
+
         <!--Окно правая часть-->
         <div class="container-window container-window__right-side">
           <div class="container-window__right-section">
-            <img src="/winwheel1/img/jpg/4.jpg" alt="Box">
+            <img src="/img/jpg/4.jpg" alt="Box">
             
             <!--Окно 1 часть-->
             <div class="right-side__first-part">
               <p>Хотите получить приз?<br/> <span>от «Созвездие Красоты»</span></p>
-                <a class="right-side__button-spin" type="button" onclick="spin();" id="btn_rodar" href="#"><img src="/winwheel1/img/jpg/7.jpg" alt="Получить"></a>
+                <a class="right-side__button-spin" type="button" onclick="spin();" id="btn_rodar" href="#"><img src="/img/jpg/7.jpg" alt="Получить"></a>
             </div>
             
             <!--Окно 2 часть-->
-            <!--Окно 3 часть
-            <div class="right-side__second-part">
+            <div class="right-side__second-part no-active">
               <p>Зарегистрируйтесь, чтобы получить приз<br/></p>
               <input class="right-side__second-part__tel" type="tel" name="tel" placeholder="Телефон">
-              <a class="right-side__button-reg" type="button" id="reg" href="#"><img src="/winwheel1/img/jpg/6.jpg" alt="ЗАРЕГИСТРИРОВАТЬСЯ"></a>
+              <a class="right-side__button-reg" type="button" id="reg" onclick="regtxt();" href="#"><img src="/img/jpg/6.jpg" alt="ЗАРЕГИСТРИРОВАТЬСЯ"></a>
             </div>
-
             
-            <div class="right-side__third-part">
-              <a class="modal-window__close" onclick=''  href='#'><img src="/winwheel1/img/jpg/5.jpg" alt="ХОРОШО"></a>
+            <!--Окно 3 часть-->
+            <div class="right-side__third-part no-active">
+              <div class="win-text"></div>
+              <span>Купон отправлен на почту</span>
+              <a class="modal-window__close" onclick=''  href='#'><img src="/img/jpg/5.jpg" alt="ХОРОШО"></a>
             </div>
-            -->
+            
           </div>
-          <a class="modal-window__close" href='#' onclick=''><img src="/winwheel1/img/jpg/3.jpg" alt="Закрыть модальное окно"></a>
+          <a class="modal-window__close" href='#' onclick=''><img src="/img/jpg/3.jpg" alt="Закрыть модальное окно"></a>
         </div>
       </div>
     </div>
   </div>
-<script src="/winwheel1/index.js"></script>
-<script src="/winwheel1/modalwindow/modalwindow.js"></script>
+<script src="/index.js"></script>
+<script src="/modalwindow/modalwindow.js"></script>
 </body>
 
 </html>

@@ -143,10 +143,22 @@ function stopRotateWheel() {
     ctx.restore();
 
     //alert(text);
+    //убираем 1 часть
+    document.querySelector('.right-side__first-part').classList.add("no-active");
+    document.querySelector('.right-side__second-part').classList.remove("no-active");
 
+
+    document.querySelector('.win-text').innerHTML = text;
     
 }
+//switch 2 часть
+function regtxt(){
+    document.querySelector('.right-side__second-part').classList.add("no-active");
 
+    document.querySelector('.right-side__third-part').classList.remove('no-active');
+    //console.log(text);
+
+}
 function easeOut(t, b, c, d) {
     let ts = (t /= d) * t;
     let tc = ts * t;
@@ -161,6 +173,7 @@ function spin() {
 }
 drawRouletteWheel();
 
+//Крутится ракушка
 btn_rodar.onclick = function (e) {
     spinAngleStart = Math.floor(Math.random() * 16 + 16); //random - Возвращает случайное число между 0 и 1 * 100
     spinTime = 0;
